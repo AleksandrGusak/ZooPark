@@ -31,15 +31,24 @@ public class AnimalTest {
     @Test
     public void getFood3() throws Exception {
         Animal animal = new Animal();
-        String expectedAnimal = "Трава";
         List <String> actualAnimal = animal.getFood("Травоядное");
-        assertEquals(expectedAnimal, actualAnimal);
+        Assert.assertEquals(List.of("Трава", "Различные растения"), actualAnimal);
+    }
+
+    @Test
+    public void getFood4() throws Exception {
+        Animal animal = new Animal();
+        List <String> actualAnimal = animal.getFood("Хищник");
+        Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), actualAnimal);
     }
 
     @Test
     public void getFamily() throws Exception {
         Animal animal = new Animal();
-        assertEquals("беличьи", "беличьи");
+        String expectedGetFamily =  animal.getFamily();
+        String actualGetFamily = "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи";
+        Assert.assertEquals(expectedGetFamily, actualGetFamily);
+
     }
 
 
