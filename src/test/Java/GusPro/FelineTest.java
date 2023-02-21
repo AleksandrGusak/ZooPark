@@ -18,7 +18,7 @@ public class FelineTest {
 
     @Mock
 
-    Predator predator;
+    Animal animal;
 
     @Test
     public void eatMeat() throws Exception {
@@ -37,14 +37,8 @@ public class FelineTest {
 
     }
 
-
     @Test
-    public void getKittens() {
-
-    }
-
-    @Test
-    public void testGetKittens() {
+    public void GetKittensCount() {
         Feline feline = new Feline();
         feline.getKittens(1);
         assertEquals(1, 1);

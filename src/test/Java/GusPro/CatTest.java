@@ -9,6 +9,8 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
 
+import static com.codeborne.selenide.impl.Cleanup.of;
+import static java.util.List.of;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -31,11 +33,5 @@ public class CatTest {
 
     }
 
-    @Test
-    public void getFood() throws Exception {
-        Cat cat = new Cat(predator);
-       List <String> actualCatFood = predator.eatMeat();
-
 
     }
-}
